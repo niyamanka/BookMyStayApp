@@ -2,8 +2,6 @@ public class UseCase3InventorySetup {
 
     public static void main(String[] args) {
 
-        System.out.println("Hotel Room Inventory Status\n");
-
         SingleRoom single = new SingleRoom();
         DoubleRoom doubleRoom = new DoubleRoom();
         SuiteRoom suite = new SuiteRoom();
@@ -12,14 +10,14 @@ public class UseCase3InventorySetup {
 
         System.out.println("Single Room:");
         single.displayRoomDetails();
-        System.out.println("Available Rooms: " + inventory.getRoomAvailability().get("Single") + "\n");
+        System.out.println("Available Rooms: " + inventory.getAvailability().get("Single"));
 
-        System.out.println("Double Room:");
+        System.out.println("\nDouble Room:");
         doubleRoom.displayRoomDetails();
-        System.out.println("Available Rooms: " + inventory.getRoomAvailability().get("Double") + "\n");
+        System.out.println("Available Rooms: " + inventory.getAvailability().get("Double"));
 
-        System.out.println("Suite Room:");
+        System.out.println("\nSuite Room:");
         suite.displayRoomDetails();
-        System.out.println("Available Rooms: " + inventory.getRoomAvailability().get("Suite"));
+        System.out.println("Available Rooms: " + inventory.getAvailability().get("Suite"));
     }
 }
